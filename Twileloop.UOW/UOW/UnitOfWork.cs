@@ -1,8 +1,8 @@
-﻿using AuthServer.Repository.Base;
-using AuthServer.Repository;
-using System;
+﻿using System;
+using Twileloop.UOW.Repository;
+using Twileloop.UOW.Repository.Base;
 
-namespace AuthServer.UOW {
+namespace Twileloop.UOW {
     // Defines a class that represents a Unit of Work (UoW) pattern for database operations.
     // Implements the IDisposable interface to ensure proper resource cleanup.
     public class UnitOfWork : IDisposable {

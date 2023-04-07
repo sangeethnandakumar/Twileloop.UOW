@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace AuthServer.Repository.Base {
+namespace Twileloop.UOW.Repository.Base {
     // Defines a generic repository class to perform basic CRUD operations on a database using LiteDB.
     // The type parameter T represents the entity type that the repository is designed to work with.
     // The T type is constrained to be a class and have a public parameterless constructor.

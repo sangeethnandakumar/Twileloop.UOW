@@ -1,7 +1,7 @@
 ﻿using LiteDB;
 using System;
 
-namespace AuthServer.Repository {
+namespace Twileloop.UOW.Repository {
     // Defines a class that represents a LiteDB database context.
     // Implements the IDisposable interface to ensure proper resource cleanup.
     public class LiteDbContext : IDisposable {
