@@ -1,8 +1,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/sangeethnandakumar/Jet API">
-    <img src="https://github.com/sangeethnandakumar/Twileloop.JetAPI/raw/master/Twileloop.JetAPI/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/sangeethnandakumar/Twileloop.UOW">
+    <img src="https://github.com/sangeethnandakumar/Twileloop.UOW/raw/master/Twileloop.UOW/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h2 align="center"> Twileloop UOW For LiteDB </h2>
