@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33417.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twileloop.UOW", "Twileloop.UOW\Twileloop.UOW.csproj", "{664BAD03-770D-4A9F-9E2E-9BBE6F077F94}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{664BAD03-770D-4A9F-9E2E-9BBE6F077F94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{664BAD03-770D-4A9F-9E2E-9BBE6F077F94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{664BAD03-770D-4A9F-9E2E-9BBE6F077F94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{664BAD03-770D-4A9F-9E2E-9BBE6F077F94}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {48551371-CB57-4A11-8955-BC301193D1A9}
+	EndGlobalSection
+EndGlobal
