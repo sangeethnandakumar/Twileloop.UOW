@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/sangeethnandakumar/Twileloop.UOW">
-    <img src="https://github.com/sangeethnandakumar/Twileloop.UOW/raw/master/Twileloop.UOW/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://iili.io/HeD5SzG.png" alt="Logo" width="80" height="80">
   </a>
 
   <h2 align="center"> Twileloop UOW For LiteDB </h2>
@@ -12,7 +12,7 @@
     <b> 
 Twileloop.UOW is a .NET library that provides a simple and efficient implementation of the Unit Of Work (UOW) pattern using LiteDB. It is a plug-and-play solution that allows you to manage database operations with ease.		 </b>
     <br />
-    <a href="https://twileloop.epub.readthedocs.io"><strong>Explore the docs »</strong></a>
+    <a href="https://twileloop.epub.readthedocs.io"><strong>Explore the docs Â»</strong></a>
     <br />
     <br />
   </p>
