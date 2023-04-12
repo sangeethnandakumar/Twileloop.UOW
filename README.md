@@ -7,17 +7,12 @@
 
   <h2 align="center"> Twileloop UOW For LiteDB </h2>
   <h4 align="center"> Free | Open-Source | Fast </h4>
-
-  <p align="center">
-    <b> 
-Twileloop.UOW is a .NET library that provides a simple and efficient implementation of the Unit Of Work (UOW) pattern using LiteDB. It is a plug-and-play solution that allows you to manage database operations with ease.		 </b>
-    <br />
-    <a href="https://twileloop.epub.readthedocs.io"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-  </p>
-  
 </div>
+
+## About
+A lightweight and ready-made implementation of unit of work pattern + LiteDB. With ability to use multiple LiteDB databases, ready-made CRUD operations repository, LiteDB's native transactions and thread-safe features.
+
+With this package, you can easily store and retrieve data without the need to write lot and lot and lots of code. It's easy as 2 steps below
 
 ## License
 > Twileloop.UOW is licensed under the MIT License. See the LICENSE file for more details.
