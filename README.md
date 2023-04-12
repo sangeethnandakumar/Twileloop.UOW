@@ -37,32 +37,56 @@ Twileloop.UOW is a .NET library that provides a simple and efficient implementat
 
 # Usage
 
+## 1. Register all databases
 ```csharp
-    const string connectionString = "Filename=<DATABASE_NAME>;Mode=Shared;Password=<PASSWORD>;";
-    
-    using (var unitOfWork = new UnitOfWork(connectionString)) 
+builder.Services.AddUnitOfWork((uow) => {
+    uow.Connections = new List<LiteDBConnection>
     {
-        //Create a repo
-        var resourceRepo = unitOfWork.GetRepository<ApiResource>();
-        //Start transaction
-        unitOfWork.BeginTransaction();
-        //Do work
-        try 
-        {
-            var newApiResource = new ApiResource {
-                DisplayName = "Survey API",
-                Name = "SurveyAPI",
-                Scopes = new List<string> { "read", "write" }
-            };
-            resourceRepo.Add(newApiResource);
+        new LiteDBConnection(<DB_NAME_1>, "Filename=DatabaseA.db; Mode=Shared; Password=****;"),
+        new LiteDBConnection(<DB_NAME_2>, "Filename=DatabaseB.db; Mode=Shared; Password=****;")
+    };
+});
+```
 
-            //Commit transaction
-            unitOfWork.Commit();
-        }
-        catch (Exception) 
+## 2. Inject and Use as required
+```csharp
+    [ApiController]
+    public class HomeController : ControllerBase 
+    {
+        private readonly UnitOfWork uow;
+
+        public HomeController(UnitOfWork uow)
         {
-            //Rollback on failure
-            unitOfWork.Rollback();
+            this.uow = uow;
         }
+
+        [HttpGet]
+        public IActionResult Get() 
+        {            
+            try
+            {
+                // Step 1: Point to a database
+                uow.UseDatabase("<DB_NAME>");
+
+                //Step 2: Make a repository
+                var dogRepo = uow.GetRepository<Dogs>();
+
+                //Step 3: Do a query
+                allDogs = dogRepo.GetAll().ToList();
+
+                //Step 4: Or any CRUD operations
+                dogRepo.Add(new Dog());
+
+                //Step 5: Commit or rollback to maintain transactions
+                uow.Commit();
+
+                return Ok(allDogs);
+            }
+            catch(Exception)
+            {
+                uow.Rollback();
+            }            
+        }
+
     }
 ```
