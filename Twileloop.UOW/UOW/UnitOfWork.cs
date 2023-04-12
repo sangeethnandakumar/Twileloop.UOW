@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Xml.Linq;
 using Twileloop.UOW.Repository;
 using Twileloop.UOW.Repository.Base;
 
@@ -6,12 +9,29 @@ namespace Twileloop.UOW {
     // Defines a class that represents a Unit of Work (UoW) pattern for database operations.
     // Implements the IDisposable interface to ensure proper resource cleanup.
     public class UnitOfWork : IDisposable {
-        private readonly LiteDbContext _dbContext;  // The LiteDbContext instance used to access the database.
+        // The LiteDbContext instance used to access the database.
+        private readonly List<LiteDbContext> _dbContexts;
+        // The LiteDbContext instance used to access the database.
+        private LiteDbContext _dbContext;
 
         // Initializes a new instance of the UnitOfWork class using the specified connection string.
         // The connection string represents the path to the database file.
-        public UnitOfWork(string connectionString) {
-            _dbContext = new LiteDbContext(connectionString); // Initializes a new LiteDbContext instance using the connection string.
+        public UnitOfWork(List<LiteDbContext> contexts) {
+            _dbContexts = contexts;
+            if (!contexts.Any()) {
+                throw new ArgumentException($"You have to register atleast one LiteDB database");
+            }
+            if (contexts.Count == 1) {
+                _dbContext = contexts.FirstOrDefault();
+            }
+        }
+
+        //Uses a specific database for operations
+        public void UseDatabase(string dbName) {
+            _dbContext = _dbContexts.Where(x => x.DatabaseName == dbName).FirstOrDefault();
+            if (_dbContext is null) {
+                throw new ArgumentException($"Can't find a registered database with name: {dbName}");
+            }
         }
 
         // Retrieves a repository instance of the specified entity type.
