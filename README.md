@@ -27,8 +27,8 @@ A plug & play package where you don't need to write lot and lot and lots of code
 builder.Services.AddUnitOfWork((uow) => {
     uow.Connections = new List<LiteDBConnection>
     {
-        new LiteDBConnection(<DB_NAME_1>, "Filename=DatabaseA.db; Mode=Shared; Password=****;"),
-        new LiteDBConnection(<DB_NAME_2>, "Filename=DatabaseB.db; Mode=Shared; Password=****;")
+        new LiteDBConnection("<DB_NAME_1>", "Filename=DatabaseA.db; Mode=Shared; Password=****;"),
+        new LiteDBConnection("<DB_NAME_2>", "Filename=DatabaseB.db; Mode=Shared; Password=****;")
     };
 });
 ```
