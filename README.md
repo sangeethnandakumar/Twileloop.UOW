@@ -12,7 +12,7 @@
 ## About
 A lightweight and ready-made implementation of unit of work pattern + LiteDB. With ability to use multiple LiteDB databases, ready-made CRUD operations repository, LiteDB's native transactions and thread-safe features.
 
-With this package, you can easily store and retrieve data without the need to write lot and lot and lots of code. It's easy as 2 steps below
+A plug & play package where you don't need to write lot and lot and lots of code to setp repositories and stuff. It's easy as 2 steps below
 
 ## License
 > Twileloop.UOW is licensed under the MIT License. See the LICENSE file for more details.
