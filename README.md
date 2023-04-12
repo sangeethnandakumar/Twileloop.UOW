@@ -5,7 +5,7 @@
     <img src="https://iili.io/HeD5SzG.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h2 align="center"> Twileloop UOW For LiteDB </h2>
+  <h2 align="center"> Twileloop UOW (With LiteDB) </h2>
   <h4 align="center"> Free | Open-Source | Fast </h4>
 </div>
 
