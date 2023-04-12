@@ -53,16 +53,16 @@ builder.Services.AddUnitOfWork((uow) => {
                 // Step 1: Point to a database
                 uow.UseDatabase("<DB_NAME>");
 
-                //Step 2: Make a repository
+                //Step 2: Get a repository for your model 'Dogs'
                 var dogRepo = uow.GetRepository<Dogs>();
 
-                //Step 3: Do a query
+                //Step 3: Do some fetch
                 allDogs = dogRepo.GetAll().ToList();
 
-                //Step 4: Or any CRUD operations
+                //Step 4: Or any CRUD operations you like
                 dogRepo.Add(new Dog());
 
-                //Step 5: Commit or rollback to maintain transactions
+                //Step 5: Finally, commit or rollback if transaction need to maintain. That's it
                 uow.Commit();
 
                 return Ok(allDogs);
