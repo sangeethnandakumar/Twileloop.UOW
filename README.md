@@ -9,10 +9,6 @@
   <h4 align="center"> Free | Open-Source | Fast </h4>
 </div>
 
-Read full integration guide: https://packages.twileloop.com/Twileloop.UOW
-
-More trusted packages from Twileloop: https://packages.twileloop.com
-
 ## About
 A lightweight and ready-made implementation of unit of work pattern + LiteDB. With ability to use multiple LiteDB databases, ready-made CRUD operations repository, LiteDB's native transactions and thread-safe features.
 
