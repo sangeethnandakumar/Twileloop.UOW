@@ -12,6 +12,12 @@
 ## About
 A lightweight and ready-made implementation of unit of work pattern + LiteDB. With ability to use multiple LiteDB databases, ready-made CRUD operations repository, LiteDB's native transactions and thread-safe features.
 
+## License
+> Twileloop.UOW is licensed under the MIT License. See the LICENSE file for more details.
+
+#### This library is absolutely free. If it gives you a smile, A small coffee would be a great way to support my work. Thank you for considering it!
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/sangeethnanda)
+
 ## Integration Guide
 Read full integration guide: https://packages.twileloop.com/Twileloop.UOW
 
