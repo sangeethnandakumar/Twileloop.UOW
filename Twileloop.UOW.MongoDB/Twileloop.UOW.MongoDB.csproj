@@ -4,14 +4,14 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
 	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
-	  <Title>LiteDB Unit Of Work</Title>
+	  <Title>MongoDB Unit Of Work</Title>
 	  <Authors>Twileloop, Sangeeth Nandakumar</Authors>
 	  <PackageProjectUrl>https://github.com/sangeethnandakumar/Twileloop.UOW</PackageProjectUrl>
 	  <RepositoryUrl>https://github.com/sangeethnandakumar/Twileloop.UOW</RepositoryUrl>
 	  <RepositoryType>git</RepositoryType>
-	  <PackageTags>uow, litedb, unit of work, repository</PackageTags>
+	  <PackageTags>uow, mongodb, unit of work, repository</PackageTags>
 	  <Description>
-		  This .NET library is a pre-built implementation of the unit of work pattern using LiteDB, providing a simple and efficient way to manage database operations.
+		  This .NET library is a pre-built implementation of the unit of work pattern using MongoDB, providing a simple and efficient way to manage database operations.
 	  </Description>
 	  <PackageIcon>logo.png</PackageIcon>
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -25,8 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="LiteDB" Version="5.0.16" />
+    <PackageReference Include="Humanizer" Version="2.14.1" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.19.2" />
   </ItemGroup>
 
   <ItemGroup>
