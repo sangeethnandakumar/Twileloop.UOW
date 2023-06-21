@@ -12,8 +12,6 @@
 ## About
 A lightweight and ready-made implementation of unit of work pattern + and a NoSQL database like LiteDB or MongoDB. With ability to use multiple LiteDB or MongoDB databases, ready-made CRUD operations repository and thread-safe features.
 
-A plug & play package where you don't need to write lot and lot and lots of code to setp repositories and stuff. It's easy as 2 steps below
-
 ## License
 > Twileloop.UOW.LiteDB - is licensed under the MIT License. See the LICENSE file for more details.
 
@@ -22,7 +20,8 @@ A plug & play package where you don't need to write lot and lot and lots of code
 #### This library is absolutely free. If it gives you a smile, A small coffee would be a great way to support my work. Thank you for considering it!
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/sangeethnanda)
 
-# Usage
+## Integration Guide
+Read full integration guide: https://packages.twileloop.com/Twileloop.UOW
 
 ## 1. Register all databases to ASP.NET dependency injection
 ```csharp
@@ -82,33 +81,3 @@ var uow = new MongoDB.Core.UnitOfWork(context);
             this.uow = uow;
         }
 
-        [HttpGet]
-        public IActionResult Get() 
-        {            
-            try
-            {
-                // Step 1: Point to a database
-                uow.UseDatabase("<DB_NAME>");
-
-                //Step 2: Get a repository for your model 'Dogs'
-                var dogRepo = uow.GetRepository<Dogs>();
-
-                //Step 3: Do some fetch
-                allDogs = dogRepo.GetAll().ToList();
-
-                //Step 4: Or any CRUD operations you like
-                dogRepo.Add(new Dog());
-
-                //Step 5: Finally, commit or rollback if transaction need to maintain. That's it
-                uow.Commit();
-
-                return Ok(allDogs);
-            }
-            catch(Exception)
-            {
-                uow.Rollback();
-            }            
-        }
-
-    }
-```
