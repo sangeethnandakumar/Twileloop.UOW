@@ -22,7 +22,7 @@ namespace Twileloop.UOW.MongoDB.Support
             }
 
             services.AddSingleton(contexts);
-            services.AddScoped<UnitOfWork>();
+            services.AddSingleton<UnitOfWork>();
         }
 
         public static ConcurrentDictionary<string, MongoDBContext> BuildDbContext(Action<Options>? options = null)
