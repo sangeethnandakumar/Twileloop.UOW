@@ -20,7 +20,7 @@ namespace Twileloop.UOW.Demo
             {
                 option.Connections = new List<LiteDBConnection>
                 {
-                    new LiteDBConnection("DatabaseA", "Filename=DatabaseA.db; Mode=Shared; Password=1234;")
+                    new LiteDBConnection("DatabaseA", "Filename=DatabaseA.db; Mode=Shared; Password=****;")
                 };
             });
             var uow = new LiteDB.Core.UnitOfWork(context);
@@ -54,7 +54,7 @@ namespace Twileloop.UOW.Demo
             {
                 option.Connections = new List<MongoDBConnection>
                 {
-                    new MongoDBConnection("MongoDB", "mongodb+srv://twileloop:fbj23pM0F6MdhjNP@cluster0.tzxpkhv.mongodb.net/")
+                    new MongoDBConnection("MongoDB", "mongodb+srv://****:****@cluster0.tzxpkhv.mongodb.net/")
                 };
             });
             var uow = new MongoDB.Core.UnitOfWork(context);
