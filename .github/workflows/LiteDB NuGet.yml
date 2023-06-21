@@ -7,7 +7,7 @@ on:
       - 'v*'
 
 env:
-  PROJECT_PATH: './Twileloop.UOW/Twileloop.UOW.csproj'
+  PROJECT_PATH: './Twileloop.UOW.LiteDB/Twileloop.UOW.LiteDB.csproj'
   PACKAGE_OUTPUT_DIRECTORY: ${{ github.workspace }}/output
   NUGET_SOURCE_URL: 'https://api.nuget.org/v3/index.json'
 
