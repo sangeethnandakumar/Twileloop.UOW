@@ -25,8 +25,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Humanizer" Version="2.14.1" />
     <PackageReference Include="LiteDB" Version="5.0.16" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.19.2" />
   </ItemGroup>
 
   <ItemGroup>

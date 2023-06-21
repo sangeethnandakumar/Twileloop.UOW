@@ -1,4 +1,5 @@
-﻿using LiteDB;
+﻿using Humanizer;
+using LiteDB;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -13,7 +14,7 @@ namespace Twileloop.UOW.LiteDB.Core
         public Repository(LiteDBContext dbContext)
         {
             _dbContext = dbContext;
-            _collection = _dbContext.Database.GetCollection<T>();
+            _collection = _dbContext.Database.GetCollection<T>(typeof(T).Name.Pluralize(inputIsKnownToBeSingular: false));
         }
 
         public T GetById(Guid id)

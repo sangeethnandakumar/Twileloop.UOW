@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33417.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Twileloop.UOW.LiteDB", "Twileloop.UOW\Twileloop.UOW.LiteDB.csproj", "{664BAD03-770D-4A9F-9E2E-9BBE6F077F94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Twileloop.UOW.LiteDB", "Twileloop.UOW.LiteDB\Twileloop.UOW.LiteDB.csproj", "{32A44023-8DEC-4818-A080-1F54E6CB20D6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Twileloop.UOW.MongoDB", "Twileloop.UOW.MongoDB\Twileloop.UOW.MongoDB.csproj", "{697F001A-0C88-4A1A-B401-421263874E7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twileloop.UOW.Demo", "Twileloop.UOW.Demo\Twileloop.UOW.Demo.csproj", "{5FAC3F6D-3D19-4EFF-A0A3-ED621806ACA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{664BAD03-770D-4A9F-9E2E-9BBE6F077F94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{664BAD03-770D-4A9F-9E2E-9BBE6F077F94}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{664BAD03-770D-4A9F-9E2E-9BBE6F077F94}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{664BAD03-770D-4A9F-9E2E-9BBE6F077F94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32A44023-8DEC-4818-A080-1F54E6CB20D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32A44023-8DEC-4818-A080-1F54E6CB20D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32A44023-8DEC-4818-A080-1F54E6CB20D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32A44023-8DEC-4818-A080-1F54E6CB20D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{697F001A-0C88-4A1A-B401-421263874E7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{697F001A-0C88-4A1A-B401-421263874E7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{697F001A-0C88-4A1A-B401-421263874E7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{697F001A-0C88-4A1A-B401-421263874E7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FAC3F6D-3D19-4EFF-A0A3-ED621806ACA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FAC3F6D-3D19-4EFF-A0A3-ED621806ACA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FAC3F6D-3D19-4EFF-A0A3-ED621806ACA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FAC3F6D-3D19-4EFF-A0A3-ED621806ACA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
