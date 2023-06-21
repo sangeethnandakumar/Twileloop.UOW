@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Linq;
-using Twileloop.UOW.Repository;
-using Twileloop.UOW.Repository.Base;
 
-namespace Twileloop.UOW
+namespace Twileloop.UOW.LiteDB.Core
 {
     // Defines a class that represents a Unit of Work (UoW) pattern for database operations.
     // Implements the IDisposable interface to ensure proper resource cleanup.
     public class UnitOfWork
     {
-        private readonly ConcurrentDictionary<string, LiteDbContext> _dbContexts;
+        private readonly ConcurrentDictionary<string, LiteDBContext> _dbContexts;
         private string _currentDbName;
 
-        public UnitOfWork(ConcurrentDictionary<string, LiteDbContext> contexts)
+        public UnitOfWork(ConcurrentDictionary<string, LiteDBContext> contexts)
         {
             _dbContexts = contexts;
             if (!_dbContexts.Any())

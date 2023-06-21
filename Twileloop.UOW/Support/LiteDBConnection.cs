@@ -1,4 +1,4 @@
-﻿namespace Twileloop.UOW
+﻿namespace Twileloop.UOW.LiteDB.Support
 {
     public class LiteDBConnection
     {
