@@ -24,8 +24,8 @@ There are 2 varients of Twileloop.UOW for LiteDB and MongoDB support
 ## Usage
 ***To get started, You have to select which package to install:***
 
-- If you prefer to use file based database, Install Twileloop.UOW with LiteDB support. Install `Twileloop.UOW.LiteDB` package
-- If you prefer to use centrally deployed MongoDB database, Install Twileloop.UOW with MongoDB support. Install `Twileloop.UOW.MongoDB` package
+- If you prefer to use file-based database, Install Twileloop.UOW with LiteDB support. Install `Twileloop.UOW.LiteDB` package
+- If you prefer to use a centrally deployed MongoDB database, Install Twileloop.UOW with MongoDB support. Install `Twileloop.UOW.MongoDB` package
 
 <hr/>
 
@@ -102,6 +102,9 @@ var context = MongoDB.Support.Extensions.BuildDbContext(option =>
     });
 var uow = new MongoDB.Core.UnitOfWork(context);
 ```
+
+### PLEASE NOTE
+❌ - BSON Serialization will work only on serializable properties. Objects like `DataTable` etc.. are non-generic which can't be stored as in DB
 
 ## 3. Inject and Use as required
 ```csharp
