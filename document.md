@@ -109,10 +109,12 @@ var uow = new MongoDB.Core.UnitOfWork(context);
 ## 3. DB Models
 Ensure your DB models inherit from `EntityBase` for support
 
+> NEVER USE A PROPERTY CALLED 'Id' IN YOUR MODEL SINCE A DEFAULT IDENTITY COLUMN WITH NAME 'Id' WILL INHERIT FROM `EntityBase` class
+
 ```csharp
   public class Dogs : EntityBase
   {
-      public Guid Id { get; set; }
+      public Guid NickName { get; set; }
       public string Name { get; set; }
   }
 ```
