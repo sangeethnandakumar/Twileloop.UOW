@@ -106,7 +106,19 @@ var uow = new MongoDB.Core.UnitOfWork(context);
 ### PLEASE NOTE
 ❌ - BSON Serialization will work only on serializable properties. Objects like `DataTable` etc.. are non-generic which can't be stored as in DB
 
-## 3. Inject and Use as required
+## 3. DB Models
+Ensure your DB models inherit from `EntityBase` for support
+
+```csharp
+  public class Dogs : EntityBase
+  {
+      public Guid Id { get; set; }
+      public string Name { get; set; }
+  }
+```
+
+## 4. Inject and Use as required
+
 ```csharp
     [ApiController]
     public class HomeController : ControllerBase 
