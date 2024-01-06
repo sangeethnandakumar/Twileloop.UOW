@@ -30,13 +30,11 @@ namespace Twileloop.UOW.Demo
             {
                 new Car
                 {
-                    Id=1,
                     Make = "BMW",
                     Model = "S Series"
                 },
                 new Car
                 {
-                    Id=2,
                      Make = "Bugatty",
                     Model = "Chiron"
                 },
