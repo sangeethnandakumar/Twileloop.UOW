@@ -1,7 +1,9 @@
-﻿namespace Twileloop.UOW.MongoDB.Support
+﻿using System;
+
+namespace Twileloop.UOW.MongoDB.Support
 {
     public class EntityBase
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
     }
 }
