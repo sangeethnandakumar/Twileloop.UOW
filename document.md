@@ -59,6 +59,7 @@ There are 2 varients of Twileloop.UOW for LiteDB and MongoDB support
 
 ## 1. Register all databases (ASP.NET dependency injection)
 ```csharp
+(For APIs with scopped injection)
 //LiteDB
 builder.Services.AddUnitOfWork((uow) => {
     uow.Connections = new List<LiteDBConnection>
@@ -68,6 +69,17 @@ builder.Services.AddUnitOfWork((uow) => {
     };
 });
 
+(For console apps, worker services etc..)
+//LiteDB
+builder.Services.AddSingletonUnitOfWork((uow) => {
+    uow.Connections = new List<LiteDBConnection>
+    {
+        new LiteDBConnection("DatabaseA", "Filename=DatabaseA.db; Mode=Shared; Password=****;"),
+        new LiteDBConnection("DatabaseB", "Filename=DatabaseB.db; Mode=Shared; Password=****;")
+    };
+});
+
+(Mongo support for UOW is always injected singleton)
 //MongoDB
 builder.Services.AddUnitOfWork((uow) => {
     uow.Connections = new List<MongoDBConnection>
