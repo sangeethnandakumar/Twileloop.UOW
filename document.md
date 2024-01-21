@@ -64,8 +64,8 @@ There are 2 varients of Twileloop.UOW for LiteDB and MongoDB support
 builder.Services.AddUnitOfWork((uow) => {
     uow.Connections = new List<LiteDBConnection>
     {
-        new LiteDBConnection("DatabaseA", "Filename=DatabaseA.db; Mode=Shared; Password=****;"),
-        new LiteDBConnection("DatabaseB", "Filename=DatabaseB.db; Mode=Shared; Password=****;")
+        new LiteDBConnection("DatabaseA", "Filename=DatabaseA.db; Connection=Shared; Password=****;"),
+        new LiteDBConnection("DatabaseB", "Filename=DatabaseB.db; Connection=Shared; Password=****;")
     };
 });
 
@@ -74,8 +74,8 @@ builder.Services.AddUnitOfWork((uow) => {
 builder.Services.AddSingletonUnitOfWork((uow) => {
     uow.Connections = new List<LiteDBConnection>
     {
-        new LiteDBConnection("DatabaseA", "Filename=DatabaseA.db; Mode=Shared; Password=****;"),
-        new LiteDBConnection("DatabaseB", "Filename=DatabaseB.db; Mode=Shared; Password=****;")
+        new LiteDBConnection("DatabaseA", "Filename=DatabaseA.db; Connection=Shared; Password=****;"),
+        new LiteDBConnection("DatabaseB", "Filename=DatabaseB.db; Connection=Shared; Password=****;")
     };
 });
 
@@ -97,8 +97,8 @@ var context = LiteDB.Support.Extensions.BuildDbContext(option =>
     {
         option.Connections = new List<LiteDBConnection>
         {
-            new LiteDBConnection("DatabaseA", "Filename=DatabaseA.db; Mode=Shared; Password=****;"),
-            new LiteDBConnection("DatabaseB", "Filename=DatabaseB.db; Mode=Shared; Password=****;")
+            new LiteDBConnection("DatabaseA", "Filename=DatabaseA.db; Connection=Shared; Password=****;"),
+            new LiteDBConnection("DatabaseB", "Filename=DatabaseB.db; Connection=Shared; Password=****;")
         };
     });
 var uow = new LiteDB.Core.UnitOfWork(context);
