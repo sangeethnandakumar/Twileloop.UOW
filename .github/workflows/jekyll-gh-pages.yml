@@ -30,10 +30,17 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Install Jekyll Theme
+        run: |
+          git clone https://github.com/pages-themes/tactile.git ./tactile-theme
+          cp -r ./tactile-theme/_layouts ./docs/
+          cp -r ./tactile-theme/_includes ./docs/
+          cp -r ./tactile-theme/_sass ./docs/
+          cp ./tactile-theme/Gemfile ./docs/
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./
+          source: ./docs
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
