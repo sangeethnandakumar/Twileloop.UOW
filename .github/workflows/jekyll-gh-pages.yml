@@ -33,9 +33,12 @@ jobs:
       - name: Install Jekyll Theme
         run: |
           git clone https://github.com/pages-themes/tactile.git ./tactile-theme
-          cp -r ./tactile-theme/_layouts ./docs/
-          cp -r ./tactile-theme/_includes ./docs/
-          cp -r ./tactile-theme/_sass ./docs/
+          mkdir -p docs/_layouts
+          mkdir -p docs/_includes
+          mkdir -p docs/_sass
+          cp -r ./tactile-theme/_layouts/* docs/_layouts/
+          cp -r ./tactile-theme/_includes/* docs/_includes/
+          cp -r ./tactile-theme/_sass/* docs/_sass/
           cp ./tactile-theme/Gemfile ./docs/
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
