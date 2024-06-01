@@ -1,2 +1,1 @@
-remote_theme: hydecorp/hydejack@v9
-baseurl: ""
+theme: jekyll-theme-minimal
