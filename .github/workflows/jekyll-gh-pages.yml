@@ -28,23 +28,38 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Install Jekyll Theme
+
+      # Step 1: Clone the 'tactile' theme repository
+      - name: Clone Tactile Theme
+        run: git clone https://github.com/pages-themes/tactile.git ./tactile-theme
+
+      # Step 2: Create necessary directories in the 'docs' folder
+      - name: Create Directories
         run: |
-          git clone https://github.com/pages-themes/tactile.git ./tactile-theme
           mkdir -p docs/_layouts
           mkdir -p docs/_includes
           mkdir -p docs/_sass
+
+      # Step 3: Copy theme files to the 'docs' folder
+      - name: Copy Theme Files
+        run: |
           cp -r ./tactile-theme/_layouts/* docs/_layouts/
           cp -r ./tactile-theme/_includes/* docs/_includes/
           cp -r ./tactile-theme/_sass/* docs/_sass/
           cp ./tactile-theme/Gemfile ./docs/
+
+      # Step 4: List files in the 'docs' folder for verification
+      - name: List Files in Docs Folder
+        run: ls -R docs/
+
+      # Step 5: Build the site with Jekyll
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./docs
           destination: ./_site
+
+      # Step 6: Upload the built site as an artifact
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
