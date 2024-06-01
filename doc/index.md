@@ -1,175 +1,123 @@
-﻿<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/sangeethnandakumar/Twileloop.UOW">
-    <img src="https://iili.io/HPIj6ss.png" alt="Logo" width="80" height="80">
-  </a>
+---
+layout: default
+---
 
-  <h1 align="center"> Twileloop.UOW</h1>
-  <h4 align="center"> LiteDB | MongoDB </h4>
-</div>
+Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-## About
-A lightweight and ready-made implementation of unit of work pattern + NoSQL database. 
+[Link to another page](./another-page.html).
 
-Twileloop.UOW is a package that ships a plug and play model predefined repository, unit of work pattern on top of 2 popular NoSQL databases.
-There are 2 varients of Twileloop.UOW for LiteDB and MongoDB support
+There should be whitespace between paragraphs.
 
-## License
-> Twileloop.UOW.LiteDB & Twileloop.UOW.MongoDB - are licensed under the MIT License. See the LICENSE file for more details.
+There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
-#### This library is absolutely free. If it gives you a smile, A small coffee would be a great way to support my work. Thank you for considering it!
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/sangeethnanda)
+# Header 1
 
-## Usage
-***To get started, You have to select which package to install:***
+This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 
-- If you prefer to use file-based database, Install Twileloop.UOW with LiteDB support. Install `Twileloop.UOW.LiteDB` package
-- If you prefer to use a centrally deployed MongoDB database, Install Twileloop.UOW with MongoDB support. Install `Twileloop.UOW.MongoDB` package
+## Header 2
 
-<hr/>
+> This is a blockquote following a header.
+>
+> When something is important enough, you do it even if the odds are not in your favor.
 
+### Header 3
 
-## 2. Install Package
-
-> Choose the installation that suites your need
-
-| Driver | To Use | Install Package   
-| :---: | :---:   | :---:
-| <img src="https://iili.io/HPIj6ss.png" alt="Logo" height="30"> | LiteDB | `dotnet add package Twileloop.UOW.LiteDB`  
-| <img src="https://iili.io/HPIj6ss.png" alt="Logo" height="30"> | MongoDB | `dotnet add package Twileloop.UOW.MongoDB`  
-
-### Supported Features
-
-| Feature     | LiteDB | MongoDB
-| ---      | ---       | ---
-| Create | ✅ | ✅
-| Read | ✅ | ✅
-| Update | ✅ | ✅
-| Delete | ✅ | ✅
-| Full Repository Access | ✅ | ✅
-| Multiple Databases | ✅ | ✅
-| Database Level Transactions | ✅ | ❌
-
-
-✅ - Available &nbsp;&nbsp;&nbsp; 
-🚧 - Work In Progress &nbsp;&nbsp;&nbsp; 
-❌ - Not Available
-
-
-## 1. Register all databases (ASP.NET dependency injection)
-```csharp
-(For APIs with scopped injection)
-//LiteDB
-builder.Services.AddUnitOfWork((uow) => {
-    uow.Connections = new List<LiteDBConnection>
-    {
-        new LiteDBConnection("DatabaseA", "Filename=DatabaseA.db; Connection=Shared; Password=****;"),
-        new LiteDBConnection("DatabaseB", "Filename=DatabaseB.db; Connection=Shared; Password=****;")
-    };
-});
-
-(For console apps, worker services etc..)
-//LiteDB
-builder.Services.AddSingletonUnitOfWork((uow) => {
-    uow.Connections = new List<LiteDBConnection>
-    {
-        new LiteDBConnection("DatabaseA", "Filename=DatabaseA.db; Connection=Shared; Password=****;"),
-        new LiteDBConnection("DatabaseB", "Filename=DatabaseB.db; Connection=Shared; Password=****;")
-    };
-});
-
-(Mongo support for UOW is always injected singleton)
-//MongoDB
-builder.Services.AddUnitOfWork((uow) => {
-    uow.Connections = new List<MongoDBConnection>
-    {
-        new MongoDBConnection("DatabaseA", "mongodb+srv://Uername:****@Cluster"),
-        new MongoDBConnection("DatabaseB", "mongodb+srv://Uername:****@Cluster")
-    };
-});
+```js
+// Javascript code with syntax highlighting.
+var fun = function lang(l) {
+  dateformat.i18n = require('./lang/' + l)
+  return true;
+}
 ```
 
-## 2. For Non Dependency Injection Setup (Like Console apps)
-```csharp
-//LiteDB
-var context = LiteDB.Support.Extensions.BuildDbContext(option =>
-    {
-        option.Connections = new List<LiteDBConnection>
-        {
-            new LiteDBConnection("DatabaseA", "Filename=DatabaseA.db; Connection=Shared; Password=****;"),
-            new LiteDBConnection("DatabaseB", "Filename=DatabaseB.db; Connection=Shared; Password=****;")
-        };
-    });
-var uow = new LiteDB.Core.UnitOfWork(context);
-
-//MongoDB
-var context = MongoDB.Support.Extensions.BuildDbContext(option =>
-    {
-        option.Connections = new List<MongoDBConnection>
-        {
-            new MongoDBConnection("DatabaseA", "mongodb+srv://Username:****@Cluster"),
-            new MongoDBConnection("DatabaseB", "mongodb+srv://Username:****@Cluster")
-        };
-    });
-var uow = new MongoDB.Core.UnitOfWork(context);
+```ruby
+# Ruby code with syntax highlighting
+GitHubPages::Dependencies.gems.each do |gem, version|
+  s.add_dependency(gem, "= #{version}")
+end
 ```
 
-### PLEASE NOTE
-❌ - BSON Serialization will work only on serializable properties. Objects like `DataTable` etc.. are non-generic which can't be stored as in DB
+#### Header 4
 
-## 3. DB Models
-Ensure your DB models inherit from `EntityBase` for support
+*   This is an unordered list following a header.
+*   This is an unordered list following a header.
+*   This is an unordered list following a header.
 
-> NEVER USE A PROPERTY CALLED 'Id' IN YOUR MODEL SINCE A DEFAULT IDENTITY COLUMN WITH NAME 'Id' WILL INHERIT FROM `EntityBase` class
+##### Header 5
 
-```csharp
-  public class Dogs : EntityBase
-  {
-      public Guid NickName { get; set; }
-      public string Name { get; set; }
-  }
+1.  This is an ordered list following a header.
+2.  This is an ordered list following a header.
+3.  This is an ordered list following a header.
+
+###### Header 6
+
+| head1        | head two          | three |
+|:-------------|:------------------|:------|
+| ok           | good swedish fish | nice  |
+| out of stock | good and plenty   | nice  |
+| ok           | good `oreos`      | hmm   |
+| ok           | good `zoute` drop | yumm  |
+
+### There's a horizontal rule below this.
+
+* * *
+
+### Here is an unordered list:
+
+*   Item foo
+*   Item bar
+*   Item baz
+*   Item zip
+
+### And an ordered list:
+
+1.  Item one
+1.  Item two
+1.  Item three
+1.  Item four
+
+### And a nested list:
+
+- level 1 item
+  - level 2 item
+  - level 2 item
+    - level 3 item
+    - level 3 item
+- level 1 item
+  - level 2 item
+  - level 2 item
+  - level 2 item
+- level 1 item
+  - level 2 item
+  - level 2 item
+- level 1 item
+
+### Small image
+
+![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
+
+### Large image
+
+![Branching](https://guides.github.com/activities/hello-world/branching.png)
+
+
+### Definition lists can be used with HTML syntax.
+
+<dl>
+<dt>Name</dt>
+<dd>Godzilla</dd>
+<dt>Born</dt>
+<dd>1952</dd>
+<dt>Birthplace</dt>
+<dd>Japan</dd>
+<dt>Color</dt>
+<dd>Green</dd>
+</dl>
+
+```
+Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
 ```
 
-## 4. Inject and Use as required
-
-```csharp
-    [ApiController]
-    public class HomeController : ControllerBase 
-    {
-        private readonly UnitOfWork uow;
-
-        public HomeController(UnitOfWork uow)
-        {
-            this.uow = uow;
-        }
-
-        [HttpGet]
-        public IActionResult Get() 
-        {            
-            try
-            {
-                // Step 1: Point to a database
-                uow.UseDatabase("<DB_NAME>");
-
-                //Step 2: Get a repository for your model 'Dogs'
-                var dogRepo = uow.GetRepository<Dogs>();
-
-                //Step 3: Do some fetch
-                allDogs = dogRepo.GetAll().ToList();
-
-                //Step 4: Or any CRUD operations you like
-                uow.BeginTransaction();
-                dogRepo.Add(new Dog());
-                uow.Commit();
-
-                return Ok(allDogs);
-            }
-            catch(Exception)
-            {
-                uow.Rollback();
-            }            
-        }
-
-    }
+```
+The final element.
 ```
