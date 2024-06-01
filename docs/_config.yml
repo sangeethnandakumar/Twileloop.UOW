@@ -1,4 +1,4 @@
-remote_theme: jekyll/minima
+remote_theme: rundocs/jekyll-rtd-theme
 plugins:
 - jekyll-remote-theme
 title: Twileloop.Uow
