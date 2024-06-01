@@ -1,175 +1,201 @@
-﻿<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/sangeethnandakumar/Twileloop.UOW">
-    <img src="https://iili.io/HPIj6ss.png" alt="Logo" width="80" height="80">
-  </a>
+ <body>
 
-  <h1 align="center"> Twileloop.UOW</h1>
-  <h4 align="center"> LiteDB | MongoDB </h4>
-</div>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          
+            <a id="forkme_banner" href="https://github.com/pages-themes/slate">View on GitHub</a>
+          
 
-## About
-A lightweight and ready-made implementation of unit of work pattern + NoSQL database. 
+          <h1 id="project_title">Slate theme</h1>
+          <h2 id="project_tagline">Slate is a theme for GitHub Pages.</h2>
 
-Twileloop.UOW is a package that ships a plug and play model predefined repository, unit of work pattern on top of 2 popular NoSQL databases.
-There are 2 varients of Twileloop.UOW for LiteDB and MongoDB support
+          
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/pages-themes/slate/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/pages-themes/slate/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+          
+        </header>
+    </div>
 
-## License
-> Twileloop.UOW.LiteDB & Twileloop.UOW.MongoDB - are licensed under the MIT License. See the LICENSE file for more details.
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>Text can be <strong>bold</strong>, <em>italic</em>, or <del>strikethrough</del>.</p>
 
-#### This library is absolutely free. If it gives you a smile, A small coffee would be a great way to support my work. Thank you for considering it!
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/sangeethnanda)
+<p><a href="./another-page.html">Link to another page</a>.</p>
 
-## Usage
-***To get started, You have to select which package to install:***
+<p>There should be whitespace between paragraphs.</p>
 
-- If you prefer to use file-based database, Install Twileloop.UOW with LiteDB support. Install `Twileloop.UOW.LiteDB` package
-- If you prefer to use a centrally deployed MongoDB database, Install Twileloop.UOW with MongoDB support. Install `Twileloop.UOW.MongoDB` package
+<p>There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.</p>
 
-<hr/>
+<h1 id="header-1">Header 1</h1>
 
+<p>This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.</p>
 
-## 2. Install Package
+<h2 id="header-2">Header 2</h2>
 
-> Choose the installation that suites your need
+<blockquote>
+  <p>This is a blockquote following a header.</p>
 
-| Driver | To Use | Install Package   
-| :---: | :---:   | :---:
-| <img src="https://iili.io/HPIj6ss.png" alt="Logo" height="30"> | LiteDB | `dotnet add package Twileloop.UOW.LiteDB`  
-| <img src="https://iili.io/HPIj6ss.png" alt="Logo" height="30"> | MongoDB | `dotnet add package Twileloop.UOW.MongoDB`  
+  <p>When something is important enough, you do it even if the odds are not in your favor.</p>
+</blockquote>
 
-### Supported Features
+<h3 id="header-3">Header 3</h3>
 
-| Feature     | LiteDB | MongoDB
-| ---      | ---       | ---
-| Create | ✅ | ✅
-| Read | ✅ | ✅
-| Update | ✅ | ✅
-| Delete | ✅ | ✅
-| Full Repository Access | ✅ | ✅
-| Multiple Databases | ✅ | ✅
-| Database Level Transactions | ✅ | ❌
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Javascript code with syntax highlighting.</span>
+<span class="kd">var</span> <span class="nx">fun</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">lang</span><span class="p">(</span><span class="nx">l</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">dateformat</span><span class="p">.</span><span class="nx">i18n</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./lang/</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">l</span><span class="p">)</span>
+  <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Ruby code with syntax highlighting</span>
+<span class="no">GitHubPages</span><span class="o">::</span><span class="no">Dependencies</span><span class="p">.</span><span class="nf">gems</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">gem</span><span class="p">,</span> <span class="n">version</span><span class="o">|</span>
+  <span class="n">s</span><span class="p">.</span><span class="nf">add_dependency</span><span class="p">(</span><span class="n">gem</span><span class="p">,</span> <span class="s2">"= </span><span class="si">#{</span><span class="n">version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
-✅ - Available &nbsp;&nbsp;&nbsp; 
-🚧 - Work In Progress &nbsp;&nbsp;&nbsp; 
-❌ - Not Available
+<h4 id="header-4">Header 4</h4>
 
+<ul>
+  <li>This is an unordered list following a header.</li>
+  <li>This is an unordered list following a header.</li>
+  <li>This is an unordered list following a header.</li>
+</ul>
 
-## 1. Register all databases (ASP.NET dependency injection)
-```csharp
-(For APIs with scopped injection)
-//LiteDB
-builder.Services.AddUnitOfWork((uow) => {
-    uow.Connections = new List<LiteDBConnection>
-    {
-        new LiteDBConnection("DatabaseA", "Filename=DatabaseA.db; Connection=Shared; Password=****;"),
-        new LiteDBConnection("DatabaseB", "Filename=DatabaseB.db; Connection=Shared; Password=****;")
-    };
-});
+<h5 id="header-5">Header 5</h5>
 
-(For console apps, worker services etc..)
-//LiteDB
-builder.Services.AddSingletonUnitOfWork((uow) => {
-    uow.Connections = new List<LiteDBConnection>
-    {
-        new LiteDBConnection("DatabaseA", "Filename=DatabaseA.db; Connection=Shared; Password=****;"),
-        new LiteDBConnection("DatabaseB", "Filename=DatabaseB.db; Connection=Shared; Password=****;")
-    };
-});
+<ol>
+  <li>This is an ordered list following a header.</li>
+  <li>This is an ordered list following a header.</li>
+  <li>This is an ordered list following a header.</li>
+</ol>
 
-(Mongo support for UOW is always injected singleton)
-//MongoDB
-builder.Services.AddUnitOfWork((uow) => {
-    uow.Connections = new List<MongoDBConnection>
-    {
-        new MongoDBConnection("DatabaseA", "mongodb+srv://Uername:****@Cluster"),
-        new MongoDBConnection("DatabaseB", "mongodb+srv://Uername:****@Cluster")
-    };
-});
-```
+<h6 id="header-6">Header 6</h6>
 
-## 2. For Non Dependency Injection Setup (Like Console apps)
-```csharp
-//LiteDB
-var context = LiteDB.Support.Extensions.BuildDbContext(option =>
-    {
-        option.Connections = new List<LiteDBConnection>
-        {
-            new LiteDBConnection("DatabaseA", "Filename=DatabaseA.db; Connection=Shared; Password=****;"),
-            new LiteDBConnection("DatabaseB", "Filename=DatabaseB.db; Connection=Shared; Password=****;")
-        };
-    });
-var uow = new LiteDB.Core.UnitOfWork(context);
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">head1</th>
+      <th style="text-align: left">head two</th>
+      <th style="text-align: left">three</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">ok</td>
+      <td style="text-align: left">good swedish fish</td>
+      <td style="text-align: left">nice</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">out of stock</td>
+      <td style="text-align: left">good and plenty</td>
+      <td style="text-align: left">nice</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ok</td>
+      <td style="text-align: left">good <code class="language-plaintext highlighter-rouge">oreos</code></td>
+      <td style="text-align: left">hmm</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ok</td>
+      <td style="text-align: left">good <code class="language-plaintext highlighter-rouge">zoute</code> drop</td>
+      <td style="text-align: left">yumm</td>
+    </tr>
+  </tbody>
+</table>
 
-//MongoDB
-var context = MongoDB.Support.Extensions.BuildDbContext(option =>
-    {
-        option.Connections = new List<MongoDBConnection>
-        {
-            new MongoDBConnection("DatabaseA", "mongodb+srv://Username:****@Cluster"),
-            new MongoDBConnection("DatabaseB", "mongodb+srv://Username:****@Cluster")
-        };
-    });
-var uow = new MongoDB.Core.UnitOfWork(context);
-```
+<h3 id="theres-a-horizontal-rule-below-this">There’s a horizontal rule below this.</h3>
 
-### PLEASE NOTE
-❌ - BSON Serialization will work only on serializable properties. Objects like `DataTable` etc.. are non-generic which can't be stored as in DB
+<hr />
 
-## 3. DB Models
-Ensure your DB models inherit from `EntityBase` for support
+<h3 id="here-is-an-unordered-list">Here is an unordered list:</h3>
 
-> NEVER USE A PROPERTY CALLED 'Id' IN YOUR MODEL SINCE A DEFAULT IDENTITY COLUMN WITH NAME 'Id' WILL INHERIT FROM `EntityBase` class
+<ul>
+  <li>Item foo</li>
+  <li>Item bar</li>
+  <li>Item baz</li>
+  <li>Item zip</li>
+</ul>
 
-```csharp
-  public class Dogs : EntityBase
-  {
-      public Guid NickName { get; set; }
-      public string Name { get; set; }
-  }
-```
+<h3 id="and-an-ordered-list">And an ordered list:</h3>
 
-## 4. Inject and Use as required
+<ol>
+  <li>Item one</li>
+  <li>Item two</li>
+  <li>Item three</li>
+  <li>Item four</li>
+</ol>
 
-```csharp
-    [ApiController]
-    public class HomeController : ControllerBase 
-    {
-        private readonly UnitOfWork uow;
+<h3 id="and-a-nested-list">And a nested list:</h3>
 
-        public HomeController(UnitOfWork uow)
-        {
-            this.uow = uow;
-        }
+<ul>
+  <li>level 1 item
+    <ul>
+      <li>level 2 item</li>
+      <li>level 2 item
+        <ul>
+          <li>level 3 item</li>
+          <li>level 3 item</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>level 1 item
+    <ul>
+      <li>level 2 item</li>
+      <li>level 2 item</li>
+      <li>level 2 item</li>
+    </ul>
+  </li>
+  <li>level 1 item
+    <ul>
+      <li>level 2 item</li>
+      <li>level 2 item</li>
+    </ul>
+  </li>
+  <li>level 1 item</li>
+</ul>
 
-        [HttpGet]
-        public IActionResult Get() 
-        {            
-            try
-            {
-                // Step 1: Point to a database
-                uow.UseDatabase("<DB_NAME>");
+<h3 id="small-image">Small image</h3>
 
-                //Step 2: Get a repository for your model 'Dogs'
-                var dogRepo = uow.GetRepository<Dogs>();
+<p><img src="https://github.githubassets.com/images/icons/emoji/octocat.png" alt="Octocat" /></p>
 
-                //Step 3: Do some fetch
-                allDogs = dogRepo.GetAll().ToList();
+<h3 id="large-image">Large image</h3>
 
-                //Step 4: Or any CRUD operations you like
-                uow.BeginTransaction();
-                dogRepo.Add(new Dog());
-                uow.Commit();
+<p><img src="https://guides.github.com/activities/hello-world/branching.png" alt="Branching" /></p>
 
-                return Ok(allDogs);
-            }
-            catch(Exception)
-            {
-                uow.Rollback();
-            }            
-        }
+<h3 id="definition-lists-can-be-used-with-html-syntax">Definition lists can be used with HTML syntax.</h3>
 
-    }
-```
+<dl>
+<dt>Name</dt>
+<dd>Godzilla</dd>
+<dt>Born</dt>
+<dd>1952</dd>
+<dt>Birthplace</dt>
+<dd>Japan</dd>
+<dt>Color</dt>
+<dd>Green</dd>
+</dl>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The final element.
+</code></pre></div></div>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        
+        <p class="copyright">Slate theme maintained by <a href="https://github.com/pages-themes">pages-themes</a></p>
+        
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+  </body>
