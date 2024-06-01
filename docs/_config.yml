@@ -1,5 +1,5 @@
 remote_theme: pages-themes/minimal
 plugins:
 - jekyll-remote-theme
-title: Slate theme
-description: Slate is a theme for GitHub Pages.
+title: Twileloop.Uow
+description: A lightweight and ready-made implementation of unit of work pattern + LiteDB. With ability to use multiple LiteDB databases, ready-made CRUD operations repository, LiteDB's native transactions and thread-safe features. A plug & play package where you don't need to write lot and lot and lots of code to setp repositories and stuff.
